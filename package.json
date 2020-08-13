@@ -8,6 +8,9 @@
   "repository": {
     "url": "git://github.com/BeeFitX/db.git"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "dependencies": {
     "mysql2": "^2.1.0",
     "sequelize": "^6.3.3"
