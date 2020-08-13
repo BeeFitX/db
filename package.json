@@ -1,0 +1,18 @@
+{
+  "name": "@beefitx/db",
+  "version": "1.0.1",
+  "description": "Package to be share between diferents services",
+  "main": "index.js",
+  "author": "Lucas Nascimento",
+  "license": "MIT",
+  "repository": {
+    "url": "git://github.com/BeeFitX/db.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "mysql2": "^2.1.0",
+    "sequelize": "^6.3.3"
+  }
+}
