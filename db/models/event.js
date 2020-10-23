@@ -3,7 +3,7 @@
 const { Model } = require('sequelize');
 const axios = require("axios");
 const crypto = require("crypto");
-const { generateSlug } = require('../../helpers/slug.helpers')
+const { generateSlug } = require('../../helpers/slug-helpers')
 
 module.exports = (sequelize, DataTypes) => {
   class Event extends Model {
