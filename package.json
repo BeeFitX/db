@@ -1,6 +1,6 @@
 {
   "name": "@beefitx/db",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Package to be share between diferents services",
   "main": "dist/db.bundle.js",
   "files": [
