@@ -9,8 +9,9 @@
   "author": "Lucas Nascimento",
   "license": "MIT",
   "scripts": {
-    "clear": "rm -rf ./build",
-    "babel": "yarn clear && ./node_modules/.bin/babel ./src --out-file dist/db.bundle.js"
+    "clear": "rm -rf ./dist",
+    "babel": "yarn clear && ./node_modules/.bin/babel ./src --out-file dist/db.bundle.js",
+    "dist": "yarn clear && browserify ./src/db/models/index.js -o dist/db.bundle.js -t [ babelify --presets [ @babel/preset-env @babel/preset-react ]"
   },
   "repository": {
     "url": "git://github.com/BeeFitX/db.git"
@@ -23,6 +24,9 @@
     "@babel/cli": "^7.12.1",
     "@babel/core": "^7.12.3",
     "@babel/polyfill": "^7.12.1",
-    "@babel/preset-env": "^7.12.1"
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.1",
+    "babelify": "^10.0.0",
+    "pg-hstore": "^2.3.3"
   }
 }
