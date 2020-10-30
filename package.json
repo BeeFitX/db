@@ -1,6 +1,6 @@
 {
   "name": "@beefitx/db",
-  "version": "1.0.11",
+  "version": "1.0.10",
   "description": "Package to be share between diferents services",
   "main": "dist/db.bundle.js",
   "files": [
@@ -10,8 +10,7 @@
   "license": "MIT",
   "scripts": {
     "clear": "rm -rf ./dist",
-    "babel": "yarn clear && ./node_modules/.bin/babel ./src --out-file dist/db.bundle.js",
-    "dist": "yarn clear && browserify ./src/db/models/index.js -o dist/db.bundle.js -t [ babelify --presets [ @babel/preset-env @babel/preset-react ]"
+    "babel": "./node_modules/.bin/babel src --out-dir dist"
   },
   "repository": {
     "url": "git://github.com/BeeFitX/db.git"
@@ -24,9 +23,6 @@
     "@babel/cli": "^7.12.1",
     "@babel/core": "^7.12.3",
     "@babel/polyfill": "^7.12.1",
-    "@babel/preset-env": "^7.12.1",
-    "@babel/preset-react": "^7.12.1",
-    "babelify": "^10.0.0",
-    "pg-hstore": "^2.3.3"
+    "@babel/preset-env": "^7.12.1"
   }
 }
