@@ -1,5 +1,5 @@
 {
-  "name": "db",
+  "name": "@beefitx/db",
   "version": "1.0.3",
   "description": "Package to be share between diferents services",
   "main": "build/db.bundle.js",
