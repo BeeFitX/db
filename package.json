@@ -2,9 +2,9 @@
   "name": "@beefitx/db",
   "version": "1.0.5",
   "description": "Package to be share between diferents services",
-  "main": "build/db.bundle.js",
+  "main": "dist/db.bundle.js",
   "files": [
-    "build/db.bundle.js"
+    "dist/db.bundle.js"
   ],
   "author": "Lucas Nascimento",
   "license": "MIT",
