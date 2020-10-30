@@ -1,7 +1,6 @@
 'use strict';
 
 const { Model } = require('sequelize');
-// const { generateSlug } = require(__dirname + '/../helpers/slug-helpers.js')
 
 module.exports = (sequelize, DataTypes) => {
   class Venue extends Model {
@@ -80,11 +79,9 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Venue.beforeCreate(instance => {
-    // instance.slug = instance.changed("name") && generateSlug(instance.name);
   });
 
   Venue.beforeUpdate(instance => {
-    // instance.slug = instance.changed("name") && generateSlug(instance.name);
   });
 
   return Venue;
