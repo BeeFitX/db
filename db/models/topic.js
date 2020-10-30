@@ -3,7 +3,7 @@
 const { Model } = require('sequelize');
 const axios = require("axios");
 const crypto = require("crypto");
-const { generateSlug } = require(__dirname + '/../helpers/slug-helpers.js')
+// const { generateSlug } = require(__dirname + '/../helpers/slug-helpers.js')
 
 module.exports = (sequelize, DataTypes) => {
   class Topic extends Model {
@@ -72,8 +72,8 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Topic.beforeCreate(async instance => {
-    instance.slug = instance.changed("name") && generateSlug(instance.name);
-    instance.link = `${process.env.DOMAIN}/${instance.slug}`
+    // instance.slug = instance.changed("name") && generateSlug(instance.name);
+    // instance.link = `${process.env.DOMAIN}/${instance.slug}`
     const { data } = await axios.post(
       `${process.env.DOMAIN}/create-sns-topic`,
       {
@@ -87,8 +87,8 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Topic.beforeUpdate(instance => {
-    instance.slug = instance.changed("name") && generateSlug(instance.name);
-    instance.link = `${process.env.DOMAIN}/${instance.slug}`
+    // instance.slug = instance.changed("name") && generateSlug(instance.name);
+    // instance.link = `${process.env.DOMAIN}/${instance.slug}`
   });
 
   Topic.afterDestroy(async instance => {

@@ -3,7 +3,7 @@
 const { Model } = require('sequelize');
 const axios = require("axios");
 const crypto = require("crypto");
-const { generateSlug } = require(__dirname + '/../helpers/slug-helpers.js')
+// const { generateSlug } = require(__dirname + '/../helpers/slug-helpers.js')
 
 module.exports = (sequelize, DataTypes) => {
   class Event extends Model {
@@ -121,8 +121,8 @@ module.exports = (sequelize, DataTypes) => {
   
   Event.beforeCreate(async instance => {
     const { Venue } = sequelize.models;
-    instance.slug = instance.changed("name") && generateSlug(instance.name);
-    instance.url = `${process.env.DOMAIN}/${instance.slug}`;
+    // instance.slug = instance.changed("name") && generateSlug(instance.name);
+    // instance.url = `${process.env.DOMAIN}/${instance.slug}`;
     if (instance.venueId) {
       instance.status = "pending"
       const { data: venue } = await Venue.findByPk(instance.venueId)
@@ -164,8 +164,8 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Event.beforeUpdate(instance => {
-    instance.slug = instance.changed("name") && generateSlug(instance.name) || instance.slug;
-    instance.url = `${process.env.DOMAIN}/${instance.slug}`;
+    // instance.slug = instance.changed("name") && generateSlug(instance.name) || instance.slug;
+    // instance.url = `${process.env.DOMAIN}/${instance.slug}`;
   });
 
   Event.afterUpdate(async instance => {
