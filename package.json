@@ -10,7 +10,7 @@
   "license": "MIT",
   "scripts": {
     "clear": "rm -rf ./build",
-    "babel": "yarn clear && ./node_modules/.bin/babel ./db/models --out-file dist/db.bundle.js"
+    "babel": "yarn clear && ./node_modules/.bin/babel ./src --out-file dist/db.bundle.js"
   },
   "repository": {
     "url": "git://github.com/BeeFitX/db.git"
